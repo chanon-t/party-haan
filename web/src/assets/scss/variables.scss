@@ -1,0 +1,150 @@
+$primary-color: #FA726A;
+$primary-hover-color: #e1665f;
+$error-color: #d50000;
+$success-color: #00c853;
+$success-hover-color: #009624;
+$body-text-color: #444;
+$body-text-hover-color: #222;
+$grey-color: #eeeeee;
+$light-grey-color: #f1f1f1;
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-medium: 992px;
+$breakpoint-large: 1200px;
+
+$text-title-size: 1.8rem;
+$text-sub-title-size: 1.4rem;
+$text-large-size: 1.2rem;
+$text-normal-size: .9rem;
+$text-small-size: .8rem;
+$text-xsmall-size: .65rem;
+
+/* Mixin */
+
+@mixin d-flex() {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+@mixin v-center() {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@mixin h-center() {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+@mixin center-center() {
+    @include v-center();
+    @include h-center();
+}
+
+@mixin fill-dock() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin v-scroll() {    
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Frequently Used Classes */
+
+[hidden] {
+    display: none !important;
+}
+
+.fill-dock {
+    @include fill-dock();
+}
+
+.w-0 {
+    width: 0 !important;
+}
+
+.h-0 {
+    height: 0 !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.v-center {
+    @include v-center();
+}
+
+.h-center {
+    @include h-center();
+}
+
+.center-center {
+    @include center-center();
+}
+
+.h-right {
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    -moz-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.flex {
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex-fill-2 {
+    -ms-flex: 2 2 auto !important;
+    flex: 2 2 auto !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.p-relative {
+    position: relative !important;
+}
+
+.v-scroll {
+    @include v-scroll();
+}
+
+.v-scroll-auto {
+    @include v-scroll();
+    overflow-y: auto;
+}
+
+.full-height {
+    height: 100vh !important;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
