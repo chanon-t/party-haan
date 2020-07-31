@@ -55,7 +55,6 @@ export class PartyApi {
         let page: any = Convert.toPageRange(+req.query.page, +req.query.size);
         let fields: any = { id: 1, ttl: 1, pic: 1, qty: 1, cdt: 1 };
         let filter: any = { 
-            // $expr: { $lt: [ "$qty.jn" , "$qty.tot" ] },
             iatv: { $ne: true } 
         };
 
