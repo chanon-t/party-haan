@@ -3,7 +3,7 @@
 *Live version: http://35.187.247.46*
 
 ## Installation
-Go to ./web and ./server directory in teminal and run this command
+Go to ./web and ./server directory in teminal and run this command.
 
 ```
 npm install
